@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card from './card';
 import CardItem from './cardItem';
 import { useState } from "react";
+import Navbar from './Navbar';
 
 function App() {
   // const [products, setProduct] = useState([
@@ -116,21 +117,23 @@ let handleRemoveCart = (id) => {
       <div className='row'>
         <div className='col-lg-8'>
           <div className='row'>
-            <div className='col-lg-12'>
-              <h3>Product's</h3>
+            <div className='col-lg-10'>
+              <Navbar></Navbar>
             </div>
           </div>
           <div className='row'>
-            {
+         
+          {
               products.map((product)=>{
                 return <Card cartitems={cartitems} data={product} handleAddToCart={handleAddToCart}></Card>
               })
             }
+       
           </div>
         </div>
         <div className='col-lg-4'>
           <div className='row'>
-            <div className='col-lg-12'>
+            <div className='col-lg-8'>
               <h3>Card's</h3>
             </div>
           </div>
@@ -161,7 +164,7 @@ let handleRemoveCart = (id) => {
               </ol>
             </div>
             <div className='col-lg-12'>
-              <h1>Total : {total}</h1>
+              <h1>Total : Rs. {total}</h1>
             </div>
           </div>
         </div>

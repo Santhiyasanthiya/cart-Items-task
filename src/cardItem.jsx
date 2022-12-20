@@ -7,7 +7,7 @@ function CardItem(props){
                   {/* <div class="fw-bold">{props.data.title}</div> */}
                   {/* ----------------------------------------------------- */}
                   <div class="fw-bold">{props.data.title}</div>
-                    {props.data.price}
+                   Rs. {props.data.price}
                   
                 </div>
                 {/* <span class="badge bg-primary rounded-pill">14</span> */}
